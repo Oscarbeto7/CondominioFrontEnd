@@ -62,7 +62,7 @@ export default function Foro() {
     };
 
     return (
-        <div className="p-10 max-w-2xl mx-auto">
+        <div className="p-8 max-w-2xl mx-auto bg-white mt-6 rounded-xl shadow-sm border border-gray-200">
             <h1 className="text-3xl font-bold mb-6 text-gray-800">Foro Vecinal</h1>
             
             {/* Área de Mensajes */}
@@ -90,7 +90,7 @@ export default function Foro() {
                 />
                 <button 
                     type="submit"
-                    className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+                    className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition shadow"
                 >
                     Enviar
                 </button>
