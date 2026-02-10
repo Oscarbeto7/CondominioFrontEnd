@@ -3,3 +3,40 @@
 body {
   @apply bg-gray-100 text-gray-900;
 }
+
+/* --- Transiciones para React Transition Group --- */
+
+/* 1. Transición para la Alerta (Fade + Slide) */
+.alerta-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.alerta-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.alerta-exit {
+  opacity: 1;
+}
+.alerta-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* 2. Transición para el contenido del Botón (Fade) */
+.boton-enter {
+  opacity: 0;
+}
+.boton-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+.boton-exit {
+  opacity: 1;
+  display: none; /* Ocultamos inmediatamente el viejo para que no se empalme */
+}
+.boton-exit-active {
+  opacity: 0;
+}
